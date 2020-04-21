@@ -1,0 +1,23 @@
+@import "~@angular/material/theming";
+
+body {
+  margin: 0;
+}
+
+mat-tab-group {
+  .mat-tab-label {
+    color: black;
+  }
+}
+
+mat-tab-body {
+  padding: 20px;
+}
+
+.mat-dialog-container {
+  .mat-dialog-content {
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+}
