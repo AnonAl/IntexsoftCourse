@@ -1,0 +1,29 @@
+.form-title {
+  margin-bottom: 20px;
+  font: 22px "Arial Black";
+}
+
+.example-button-row {
+  .mat-raised-button {
+    width: 100%;
+  }
+}
+
+.registration-form {
+  a {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font: 15px "Arial";
+    margin-top: 10px;
+
+  }
+
+  a:hover {
+    cursor: pointer;
+    color: #5ca0c9;
+
+  }
+}
+
+

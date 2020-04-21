@@ -1,0 +1,20 @@
+<div *ngIf="product">
+  <div>
+    <span>name:</span>
+    <span>{{product.name}}</span>
+  </div>
+  <div>
+    <span>brand:</span>
+    <span>{{product.brand}}</span>
+  </div>
+  <div>
+    <span>description:</span>
+    <span>{{product.descriptions.consumer}}</span>
+  </div>
+  <div>
+    <span>images:</span>
+  </div>
+  <div *ngFor="let image of product.tradeIdentifiers[0].images">
+    <img src="{{image}}">
+  </div>
+</div>

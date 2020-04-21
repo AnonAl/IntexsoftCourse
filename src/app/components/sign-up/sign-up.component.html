@@ -1,0 +1,38 @@
+<div mat-dialog-content>
+  <mat-label class="form-title">Registration</mat-label>
+  <form [formGroup]="formGroup">
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your name</mat-label>
+      <input matInput placeholder="Name" formControlName="name" required>
+      <mat-error *ngIf="hasError('name', 'required')">Name is required</mat-error>
+      <mat-error *ngIf="hasError('name', 'isNan')">Invalid name format</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your surname</mat-label>
+      <input matInput placeholder="Surname" formControlName="email" required>
+      <mat-error *ngIf="hasError('surname', 'required')">Surname is required</mat-error>
+      <mat-error *ngIf="hasError('surname', 'isNan')">Invalid surname format</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" formControlName="email" required>
+      <mat-error *ngIf="hasError('email', 'required')">Email is required</mat-error>
+      <mat-error *ngIf="hasError('email', 'email')">Invalid email format</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput placeholder="Password" formControlName="password" required>
+      <mat-error *ngIf="hasError('password', 'required')">Password is required</mat-error>
+      <mat-error *ngIf="hasError('password', 'minlength')">Password length min 8 char</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Repeat your password</mat-label>
+      <input matInput placeholder="Repeat password" formControlName="repeatPassword" required>
+      <mat-error *ngIf="hasError('repeatPassword', 'required')">Field is required</mat-error>
+      <mat-error *ngIf="hasError('repeatPassword', 'mustMatch')">Passwords must match</mat-error>
+    </mat-form-field>
+    <div class="example-button-row">
+      <button mat-raised-button color="accent">Registration</button>
+    </div>
+  </form>
+</div>

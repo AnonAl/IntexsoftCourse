@@ -1,0 +1,23 @@
+<mat-tab-group>
+  <mat-tab label="Stores">
+    <div>
+      <button (click)="getStores()">Show Store</button>
+    </div>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of stores">{{item.name}}</mat-list-item>
+    </mat-list>
+
+  </mat-tab>
+  <mat-tab label="Products">
+    <app-products></app-products>
+  </mat-tab>
+  <mat-tab label="Categories">
+    <div>
+      <button (click)="getCategories()">Show categories</button>
+    </div>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let item of categories">{{item.name}}</mat-list-item>
+    </mat-list>
+  </mat-tab>
+
+</mat-tab-group>

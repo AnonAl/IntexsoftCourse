@@ -1,0 +1,65 @@
+mat-toolbar {
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  background-color: azure;
+  border-bottom: black 0.5px solid;
+
+  mat-icon:hover{
+    color: black;
+  }
+}
+
+.navBarPadding {
+  height: 70px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  margin-right: 10px;
+
+  .links-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+    font: 16px Calibri;
+    cursor: pointer;
+
+    mat-icon {
+      width: 30px;
+      height: 30px;
+      font-size: 30px;
+    }
+  }
+
+  a {
+    margin-right: 15px;
+
+    &:hover {
+      font-weight: bold;
+    }
+  }
+
+  .user {
+    color: cornsilk;
+    padding-left: 6.2px;
+  }
+
+  .main {
+    color: cornsilk;
+    padding-left: 6.2px;
+  }
+
+  label {
+    font: 14px Cambria;
+  }
+}
+

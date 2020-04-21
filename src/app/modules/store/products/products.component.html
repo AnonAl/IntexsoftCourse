@@ -1,0 +1,16 @@
+<form class="example-form" (submit)="$event.preventDefault()">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search product</mat-label>
+    <input (keyup.enter)="findProduct($event)" matInput placeholder="Search product">
+    <mat-icon (click)="findProduct($event)" matSuffix >search</mat-icon>
+  </mat-form-field>
+</form>
+<mat-list>
+  <mat-list-item *ngFor="let item of products">
+    <div class="product">
+      <span class="product-name" [routerLink]="['product', item.sku]">{{item.name}}</span>
+      <button class="add" *ngIf="!isOnBasket(item)" mat-raised-button (click)="addToBasket(item)">Add to basket</button>
+      <button class="remove" *ngIf="isOnBasket(item)" mat-raised-button (click)="removeFromBasket(item)">Remove from basket</button>
+    </div>
+  </mat-list-item>
+</mat-list>
